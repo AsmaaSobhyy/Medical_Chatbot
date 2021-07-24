@@ -1,8 +1,4 @@
-## Dependencies
-
-numpy==1.18.1.\
-scikit-learn==0.24.2.\
-pandas==1.0.1.\## Description
+### Description
 a medical chatbot deployed into DialogFlow that takes user's input and diagnose the case into a disease from a preknown diseases.
 
 ### Dependencies
