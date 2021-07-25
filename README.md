@@ -1,5 +1,7 @@
 ### Description
-a medical chatbot deployed into DialogFlow that takes user's input and diagnose the case into a disease from a preknown diseases.
+This is a proposed medical chatbot deployed into DialogFlow that takes user's input, analyzes it and diagnoses the case into a disease from a pre-defined [dataset](https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=symptom_precaution.csv). \
+The bot analyses the user's sentence by checking whether it's medically relevant or not, then if it finds the input relevant, it goes to the next step. \
+The bot then check for the number of the symptoms found -if any- in the user's inquiry, if they match the threshold then the model is called to send the predicted diagnosis based on these symtoms, otherwise the bot starts to ask follow-up questions for the user comprising the most relevant symptom to what he has mentioned before.
 
 ### Dependencies
 
@@ -13,25 +15,29 @@ pickle version==4.0.
 ### Files Description
 
 ##### chatbot/disease_classifier.py 
- the file containing the python code that classifies the disease which the input symptoms belong to.
+Python file that contains the classification code (using SVM only) for the disease which the input symptoms belong to.
 
 ##### chatbot/get_next_symptom.py 
-the python file containing a function that take some symptoms and predict which is the next important symptom.
+Python file that contains a function that takes some symptoms and predicts the next most important symptom to be asked as a follow-up question for the user.
 ##### chatbot/medical_relevence.py 
-a python file that contains a function that takes a message and decide if it's relevent to the medical context or not.
+Python file that contains a function that takes user's message and decide if it's relevent to the medical context or not.
 
 ##### chatbot/clean_data.csv
-a csv that contains a subset of the clean data
+Csv file that contains a subset of the clean data used for training the model.
 
 ##### chatbot/disease_classifier.pkl
-the model used in disease_classifier.py
+The SVM classification model used in `disease_classifier.py` serialized using pickle.
 
 ##### chatbot/medical_relevence_classifier.joblib
-the model used in medical_relevence.py
+The model used in `medical_relevence.py`
 
 ##### medical_relevence_classification.ipynb
-python notebook for the relevance function and text preprocessing
+Python notebook for the medical relevance function and its needed steps.
 
-##### Disease_Prediction.ipynb
-python notebook for clustering and follow up symptom
+##### Disease_Prediction_Clustering_NextSymptom.ipynb
+Python notebook for different clustering techniques applied (K-means and DBSCAN) and get_next_symptom function applied.
+
+##### Disease_Prediction_Classification,ipynb
+Python notebook for different classification techniques applied (Random forest, XGBoost and SVM)
+
 
