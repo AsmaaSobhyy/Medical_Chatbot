@@ -1,7 +1,7 @@
 ### Description
-This is a proposed medical chatbot deployed into DialogFlow that takes user's input, analyzes it and diagnoses the case into a disease from a pre-defined [dataset](https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=symptom_precaution.csv). \
-The bot analyses the user's sentence by checking whether it's medically relevant or not, then if it finds the input relevant, it goes to the next step. \
-The bot then check for the number of the symptoms found -if any- in the user's inquiry, if they match the threshold then the model is called to send the predicted diagnosis based on these symtoms, otherwise the bot starts to ask follow-up questions for the user comprising the most relevant symptom to what he has mentioned before.
+* This is a proposed medical chatbot deployed into DialogFlow that takes user's input, analyzes it and diagnoses the case into a disease from a pre-defined [dataset](https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=symptom_precaution.csv). \
+* The bot analyses the user's sentence by checking whether it's medically relevant or not, then if it finds the input relevant, it goes to the next step. \
+* The bot then check for the number of the symptoms found -if any- in the user's inquiry, if they match the threshold then the model is called to send the predicted diagnosis based on these symtoms, otherwise the bot starts to ask follow-up questions for the user comprising the most relevant symptom to what he has mentioned before.
 
 ### Dependencies
 
